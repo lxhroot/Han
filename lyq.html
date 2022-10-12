@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			var array = ["22222","a","","aaaaa"];
+			var newArray = [] , num=0;
+			/* for (var i=0;i<array.length;i++){
+				var length = array[i].length;
+				newArray = length;
+				num++
+			}
+			console.log(num) */
+			
+			for (var i of array){
+				newArray.push(i.length);
+			}
+			console.log(newArray)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

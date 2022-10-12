@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>对话框判断</title>
+	</head>
+	<script>
+		var s = prompt('请输入账号');
+		document.write(s.length)
+		if(s.length<3 || s.length > 20){
+			alert("账号长度必须在3~20之间")
+		}
+		if(s.indexOf('-') !== -1 || s.indexOf('@') == -1 ){
+			alert("账号输入不合法请重新输入")
+		}else{
+			alert("登陆成功")
+		}
+		
+	</script>
+	<body>
+	</body>
+</html>

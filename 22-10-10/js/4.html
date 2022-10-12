@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script>
+		function Clothes(name,color){
+			this.name = name;
+			this.color = color;
+		}
+		Clothes.prototype.type = "T-shirt";
+		Clothes.prototype.Clothes_fun = function(){
+			document.write('你好我是：'+this.name+'我今天穿了：'+this.color+this.type)
+		}
+		var c1 = new Clothes('Jim','yellow');
+		var c2 = new Clothes('Alice','black');
+		c1.Clothes_fun();
+		c2.Clothes_fun();
+	</script>
+	<body>
+	</body>
+</html>

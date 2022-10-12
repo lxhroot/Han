@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="红色" onclick="color11()">
+		<input type="button" value="黄色" onclick="color12()">
+		<input type="button" value="蓝色" onclick="color13()">
+		<input type="text" id="wb1">
+		<input type="button" value="确定" onclick="zdy()">
+		<script>
+		function color11() {
+			document.body.style.backgroundColor="red";
+		}
+		function color12() {
+			document.body.style.backgroundColor="yellow";
+		}
+		function color13() {
+			document.body.style.backgroundColor="blue";
+		}
+		function zdy() {
+			var c1 = document.getElementById("wb1").value;
+			var c2;
+			document.body.style.backgroundColor="c2";
+			switch(c1){
+				case '蓝色':c2 = "blue";break;
+				case '红色':c2 = "red";break;
+				case '黄色':c2 = "yellow";break;
+				case '绿色':c2 = "green";break;
+				case '黑色':c2 = "black";break;
+			}
+		}
+		</script>
+	</body>
+</html>

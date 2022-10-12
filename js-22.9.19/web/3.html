@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>22.09.19第三题</title>
+		<script>
+			var arr = ['a','b','d','d','c','d','d'];
+			var search = 'd';
+			var res=[];//存放下标
+			var i = arr.indexOf(search);		//检索search
+			while (i !== -1){
+				res.push(i);					//如果该元素存在则将其下标存进res
+				i = (i<=arr.length-1?arr.indexOf(search,i+1):-1);
+			}
+			document.write("元素："+search+"数组对应下标："+res+"<br>d出现的次数："+res.length)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		/* 	var arr1 = ['1','a','2','f']
+			for(var a2 of arr1){
+				document.write(a2+"<br>")
+			}
+			for(var a2 in arr1){
+				document.write(a2+"<br>")
+			} */
+			
+			//冒泡排序
+			/* var arr = [3, 4, 1, 2];
+			function bubbleSort (arr) {
+			  for (var j = 0; j < arr.length - 1; j++) {
+			    // 这里要根据外层for循环的 j，逐渐减少内层 for循环的次数
+			    for (var i = 0; i < arr.length - 1 - j; i++) {
+			      if (arr[i+1] > arr[i]) {
+			        var temp = arr[i];
+			        arr[i] = arr[i + 1];
+			        arr[i + 1] = temp;
+			      }
+			    }
+			  }
+			  return arr;
+			}
+			bubbleSort(arr);
+			document.write(arr) */
+			
+			//猴子选大王
+						
+				var total = prompt('monkey');
+				var kick = prompt('kick');
+						
+				var monkey =[];
+				for (var i=0;i<total;++i) {
+					monkey.push(i+1);
+				}   //生成猴子数组（1，2，3……total）
+			
+			
+				var j = 0;             //猴子数组报数的下标，每次都从0开始   
+				while(monkey.length>1){
+					j++;                //循环数组，猴子报数 
+							
+					head = monkey.shift();  //取出每次报数的猴子，如果报的数对kick取余不为0，则不是要kick的猴子，放到数组的末尾，（也就是首尾相连的环的开始，）然后下一只继续报数，j++。
+					//此处如果取余是0，则下一个head就不放回去，就是被kick了，下一只猴子继续报数后，head这个变量又成为当前报数的猴子。
+					if (j%kick !=0) {
+						monkey.push(head);
+					} 
+				}
+				document.write('猴王编号'+monkey[0]);
+				
+
+			
+			/* var data = ['peach','pear',26,'26','grape']
+			console.log(data.includes(26,3))
+			console.log(data.includes(26,-3))
+			console.log(Array.isArray(data))
+			console.log(data.indexOf('pear')) */
+		</script>
+	</body>
+</html>

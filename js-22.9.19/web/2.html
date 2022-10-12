@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>22.09.19第二题</title>
+		<script>
+			//冒泡排序
+			var arr = [10,86,9,6,412,20,53];
+			function bubbleSort (arr) {
+			  for (var j = 0; j < arr.length - 1; j++) {
+			    // 这里要根据外层for循环的 j，逐渐减少内层 for循环的次数
+			    for (var i = 0; i < arr.length - 1 - j; i++) {
+			      if (arr[i+1] > arr[i]) {
+			        var temp = arr[i];
+			        arr[i] = arr[i + 1];
+			        arr[i + 1] = temp;
+			      }
+			    }
+			  }
+			  return arr;
+			}
+			bubbleSort(arr);
+			var arr2 = [10,86,9,6,412,20,53];
+			function bubbleSort2 (arr2) {
+			  for (var j = 0; j < arr.length - 1; j++) {
+			    // 这里要根据外层for循环的 j，逐渐减少内层 for循环的次数
+			    for (var i = 0; i < arr.length - 1 - j; i++) {
+			      if (arr2[i+1] < arr2[i]) {
+			        var temp = arr2[i];
+			        arr2[i] = arr2[i + 1];
+			        arr2[i + 1] = temp;
+			      }
+			    }
+			  }
+			  return arr2;
+			}
+			bubbleSort2(arr2);
+			alert("从大到小排列为："+arr+"从小到大排列为："+arr2)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

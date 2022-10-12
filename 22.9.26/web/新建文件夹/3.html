@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>加密</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/* 3.输入四位的整数，对数据进行加密，加密规则如下：每位数字都加上5,然后用除以10的余数代替该数字，
+			再将第一位和第四位交换，第二位和第三位交换，请编写一个函数，传入原文，输出密文。 */
+			var ft = 0,sd = 0;//声明两个中间值，数值交换的时候用来存放交换值
+			function jiaMi(a,b,c,d){
+				//根据题意写出公式
+				a = (a + 5)%10;
+				b = (b + 5)%10;
+				c = (c + 5)%10;
+				d = (d + 5)%10;
+				//第一位和第四位交换
+				ft = a;
+				a = d;
+				d = ft;
+				//第二位和第三位交换
+				sd = b;
+				b = c;
+				c = sd;
+				console.log(a,b,c,d);
+			}
+			jiaMi(2,7,4,9);
+		</script>
+		
+	</body>
+</html>

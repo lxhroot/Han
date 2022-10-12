@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>22.09.19第四题</title>
+		<script>
+			function repeat (arr){
+				for (var i = 0; i<arr.length;i++){			//取出一个数
+					for (var j =i+1; j<arr.length;j++){		//取出n-1个数
+						
+						if(arr[i] == arr[j]){				//将两个数做对比 ps（两个数相同）
+							
+							var del = j;					//将对比后的数存入del数组
+							
+							arr.splice(del,1);				//删除数组中一个数
+						}
+					}
+				}
+				return arr;									//返回arr
+			
+			}
+			var arr = [1,5,4,4,7,6,6];
+			alert("去重后结果为："+repeat(arr))
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

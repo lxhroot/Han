@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>22.09.19第一题</title>
+		<script>
+			function tab(arr){
+				var len = arr.length;		//获取数组长度并赋值
+				var sum = 0;				//创建一个0
+				var odd = 0,even = 0;
+				for (var i in arr){
+					arr[i] % 2 === 0 ? even++ : odd++;		//遍历数组并判断是否为偶数是则even++不是则odd++
+				}
+				for (var j = 0;j<len;j++){
+					sum+=arr[j];			//再次遍历数组将j赋值给sum并相加
+				}
+				alert("偶数的个数为："+even+";"+"奇数的个数为："+odd+"；"+"该数组的平均数为："+sum/len/* 计算平均值 */)
+				
+			}
+			//调用
+			var arr = [1,3,5,7,24,32,25,48];
+			tab(arr)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

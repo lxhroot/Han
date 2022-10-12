@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>拷贝学生对象</title>
+	</head>
+	<script>
+		/* function deepCopy(obj) {
+		  var o = {};
+		  for (var k in obj) {
+		    o[k] = (typeof obj[k] === 'object') ? deepCopy(obj[k]) : obj[k];
+		  }
+		  return o;
+		}
+		var p1 = {name: 'Jim', subject: {name: ['HTML', 'CSS']} };
+		var p2 = deepCopy(p1);
+		p2.subject.name[0] = 'JavaScript';
+		console.log(p1.subject.name[0]);    // 输出结果：HTML
+		console.log(p2.subject.name[0]);    // 输出结果：JavaScript
+		console.log(p1 === p2); */ 
+		function deepCopy(obj) {
+		  var o = {};
+		  for (var k in obj) {
+		    o[k] = (typeof obj[k] === 'object') ? deepCopy(obj[k]) : obj[k];
+		  }
+		  return o;
+		}
+		var student = {name:"james",class1:"1",score:{math:75,english:67,chemistry:82}}
+		var student2 = deepCopy(student);
+		student2.name = '蔡徐坤';
+		student2.class1 = 2
+		student2.score.math = 70;
+		document.write(student.name+','+student.class1+','+student.score.math+'<br>')
+		document.write(student2.name+','+student2.class1+','+student2.score.math+'<br>')
+		document.write(student === student2)
+	</script>
+	<body>
+	</body>
+</html>

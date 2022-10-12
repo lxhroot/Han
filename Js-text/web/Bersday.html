@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="nianfen" id="y">
+		<input type="button" value="计算" onclick="birth()">
+		<script>
+			function birth (){
+				 
+				let timestamp = Date.parse(new Date());
+				 
+				let date = new Date(timestamp);
+				 
+				//获取年份  
+				 
+				let thieYear = date.getFullYear(); //获取完整年份
+/* ---------------------------------------------------------------------------------------------------------- */
+				var inyear = document.getElementById("y").value //获取输入框内容
+				var outyear = thieYear-inyear //计算
+				alert(outyear+"岁")
+				
+			}
+			
+		</script>
+	</body>
+</html>

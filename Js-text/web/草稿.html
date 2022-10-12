@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/* var a = 0
+			if (a == ''){
+				alert("true")
+			}else{
+				alert("false")
+			} */
+			/* var o5 = {};			// 创建一个空对象
+			o5.name = 'Jack';			// 为对象增加属性
+			o5.introduce = function () {	// 为对象增加方法
+			  alert('My name is ' + this.name);	// 在方法中使用this代表当前对象
+			};
+			alert(o5.name);			// 访问name属性，输出结果：Jack
+			o5.introduce();	// 调用introduce()方法，输出结果：My name is Jack */
+			/* var obj = {name: 'Tom', age: 16,class1:21339};
+			for (var k in obj) {
+			  document.write(k + '-' + obj[k]+"</br>");
+			} */
+			
+			/* var p1 = new Person('Jack', 18);
+			var p2 = new Person('Alice', 19);
+			console.log(p1);		
+			console.log(p2);		
+			p1.sayHello();
+			console.log(p1.constructor); */
+			
+			/* function Person() {
+			  var name = 'Jim';
+			  this.getName = function () {
+			    return name;
+			  };
+			}
+			var p = new Person();	// 创建实例对象p
+			console.log(p.name); 	// 访问私有成员，输出结果：undefined
+			// p.getName();
+			document.write(p.getName()) */
+			
+		/* 	function method() {
+				document.write(this.name);
+				}
+				// 输出结果：张三
+				method.apply({name: 'han'}); 
+				// 输出结果：李四
+				method.call({name: 'tom'}); */
+				
+				/* var name = 'Administrator';
+				//var name = 'hhdsfj';
+				if (name.length < 3 || name.length > 10) {
+				 document.write('用户名长度必须在3~10之间。');
+				}else{
+					document.write("创建成功！等待加载~~~")
+				}
+
+				if (name.toLowerCase().indexOf('admin') !== -1) {
+				  document.write('用户名中不能包含敏感词：admin。');
+				}else{
+					document.write("创建成功！等待加载~~~")
+				}
+				 */
+				
+				/* var date = new Date();	  // 基于当前时间创建Date对象
+				// 示例结果：Fri Oct 06 2017 11:53:04 GMT+0800 (中国标准时间)
+				document.write(date.toString()+'<br>');
+				document.write(date.getFullYear()+'<br>');	// 示例结果：2017
+				document.write(date.getMonth()+'<br>');		// 示例结果：9
+				document.write(date.getDate()); */
+				
+				/* function Person(name) {
+				  this.name = name;
+				}
+				Person.prototype.sayHello = function () {
+				  console.log('你好，我是' + this.name);
+				}
+				var p1 = new Person('Jim');
+				var p2 = new Person('Tom');
+				
+				p1.sayHello();// 输出结果：你好，我是Jim
+				p2.sayHello();// 输出结果：你好，我是 Tom */
+				
+				
+				/* function Person() {}
+				Person.prototype = {
+				  sayHello: function () {
+				    console.log('你好，我是你的新对象');
+				  }
+				}
+				var p = new Person();
+				p.sayHello(); */
+
+				
+				/* var obj = {
+				  sayHello: function(){
+				    console.log('我是一个带有sayHello方法的对象');
+				  }
+				};
+				var newObj = Object.create(obj);
+				newObj.sayHello(); */
+				
+				
+				function extend(o1, o2) {
+				  for (var k in o2) {
+				    o1[k] = o2[k];
+				  }
+				}
+				var o1 = {name: 'Jim'};
+				var o2 = {age: 16, gender: 'male'};
+				extend(o1, o2);
+				console.log(o1.name);
+				console.log(o1.age);
+				console.log(o1.gender);
+
+
+		</script>
+	</body>
+</html>
