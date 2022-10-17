@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>1</title>
+	</head>
+	<style>
+	/* a{
+		wi
+	} */
+	</style>
+	<a href="http://www.baidu.com">链接--当前页面打开--相当于window.location.href</a>
+	    <br>
+	    <a href="http://www.baidu.com" target="_blank">超链接--新窗口打开---相当于window.open</a>
+	    <br>
+	    <button id="btn">按钮</button>
+	 <script type="text/javascript">
+	     var btn = document.getElementById('btn') 
+	     btn.onclick = function () {
+	         console.log(111)
+	         // window.location.href = 'http://www.baidu.com'  //当前页面打开
+	         window.open('http://www.baidu.com','','height=100,width=400')  //新窗口打开
+	     }
+	  </script>
+	<body>
+		
+	</body>
+</html>

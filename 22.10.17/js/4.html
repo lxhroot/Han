@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>4</title>
+	</head>
+	<body>
+		<div id="box">
+			<div id="d"></div>
+			<div id="h"></div>
+			<div id="m"></div>
+			<div id="s"></div>
+		</div>
+	</body>
+	<script>
+		//设置秒杀结束时间
+		var endTime = new Date('2022-11-11 00:00:00'),endSeconds = endTime.getTime();
+		//定义变量保存剩余时间
+		var d = h = m = s = 0;
+		//设置定时器，实现秒杀效果
+		var id = setInterval(seckill, 1000);
+		function seckill(){
+			var nowTime = new Date();
+			
+			var remaining = parseInt((endSeconds - nowTime.getTime()) / 1000);
+			if (remaining >0){
+				d = parseInt(remaining / 86400);
+				
+				h = parseInt((remaining / 3600) % 24);
+				
+				m = parseInt((remaining / 60) % 60);
+				
+				s = parseInt(remaining % 60);
+				
+				//补零
+				d = d < 10 ? '0' + d : d;
+				h = h < 10 ? '0' + h : h;
+				m = m < 10 ? '0' + m : m;
+				s = s < 10 ? '0' + s : s;
+			}else{
+				clearInterval(id);//秒杀过期清除计时器
+			}
+			//将剩余时间显示到指定位置
+			document.getElementById('d').innerHTML = d + '天';
+			document.getElementById('h').innerHTML = h + '时';
+			document.getElementById('m').innerHTML = m + '分';
+			document.getElementById('s').innerHTML = s + '秒';
+		}
+	</script>
+</html>

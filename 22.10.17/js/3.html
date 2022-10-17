@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>3</title>
+	</head>
+	<style>
+				* {
+					margin: 0;
+					padding: 0;
+				}
+		
+				#box {
+					width: 510px;
+					height: 100px;
+					display: flex;
+					justify-content: flex-start;
+					margin: 200px auto;
+					background: #f2f2f2;
+				}
+		
+				span {
+					display: block;
+					width: 120px;
+					height: 100px;
+					font: 100px/100px "";
+					text-align: center;
+					color: #9d9e9f;
+				}
+		
+				p {
+					width: 50px;
+					height: 100px;
+					font: 50px/100px "";
+					box-sizing: border-box;
+					padding-top: 15px;
+				}
+
+	</style>
+	<body>
+		<div id="box">
+				<span></span>
+				<p>时</p>
+				<span></span>
+				<p>分</p>
+				<span></span>
+				<p>秒</p>
+			</div>
+	</body>
+	<script>
+		var timer;
+		onload = function() {
+			start(); 								//页面加载完成后就直接在页面显示，避免刷新时出现间断
+			tiemr = setInterval(start, 1000);		//加载完成执行定时器，回调start()
+		}
+	
+		function start() {
+			var date = new Date(); 			//获取本地时间
+			var h = date.getHours();		//根据本地时间过去小时(hours)
+			var m = date.getMinutes();
+			var s = date.getSeconds();
+	
+	
+			h < 10 ? (h = "0" + h) : h; // 对出现个位数的数值进行补零。
+			m < 10 ? (m = "0" + m) : m;
+			s < 10 ? (s = "0" + s) : s;
+			
+			//ES5新增选择器
+			//无论如何选择出的都是数组，哪怕只有一个，解析数组后才能使用标签
+			var show = document.querySelectorAll("span");
+			// console.log(show)
+			show[0].innerHTML = h;  //将值显示在标签内
+			show[1].innerHTML = m;
+			show[2].innerHTML = s;
+		}
+	</script>
+	
+</html>

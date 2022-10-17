@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>1</title>
+	</head>
+	<body>
+	<!-- 2. 设计一个倒计时页面，页面打开时使用prompt要求用户输入一个整数作为倒计时时间，
+	页面上每隔一秒钟更新一次倒计时剩余时间，当倒计时剩余时间为0的时候将页面内容设置为“倒计时时间已到” -->
+	倒计时<span id = 'a1'></span>秒
+	<script>
+		var inTime = prompt('请输入倒计时时间')
+		
+		function timing(secs){
+			var seconds = document.getElementById('a1')
+			
+			seconds.innerHTML = --secs;
+			
+			
+			if (secs > 0){
+				setTimeout('timing('+ secs +')',1000);
+			}else{
+				document.write('时间已到！！！')
+			}
+		};
+		
+		timing(inTime);
+	</script>
+	
+	</body>
+</html>
