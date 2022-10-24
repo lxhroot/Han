@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>2</title>
+	</head>
+	<body>
+		<p>什么是JavaScript</p>
+		
+		 <p>JavaScript是一门功能强大的编程语言</p>
+		
+		 <h1>一起来学习JavaScript程序设计</h1>
+		
+		 <hr />
+		
+		 <p>JavaScript的发展历史</p>
+		 <button onclick="deleteP()">点我！！！</button>
+	</body>
+	<script>
+		function deleteP(){
+		// 获取所有的P元素
+		var element,
+		    pElements = document.getElementsByTagName('p');
+		// 删除所有P元素
+		while (pElements.length>0) {
+		    element = pElements[0];
+		    element.parentElement.removeChild(element);
+		}
+	}
+	</script>
+</html>

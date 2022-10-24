@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		  <ul id="u1">
+		
+		    <li>java</li>
+		
+		    <li>c++</li>
+		
+		    <li>javascript</li>
+		
+		    <li>php</li>
+		
+		    <li>javaweb</li>
+		
+		  </ul>
+		  <button onclick="Changecolor()">ClickMe!!!</button>
+	</body>
+	<script>
+	    function Changecolor(){
+	       
+	       	var lis = document.querySelectorAll("li");
+	       	for(var i = 0;i < 10;i++){
+	       		if(i % 2!=0){
+	       			lis[i].style.backgroundColor="red";
+	       		}else{
+	                   lis[i].style.backgroundColor="yellow";
+	       		}
+	       	}
+	        
+	          var i = 1;
+	          while(i<=10){
+	          	if(i%2!=0){
+	          		lis[i-1].style.backgroundColor="red";
+	          	}else{
+	          		lis[i-1].style.backgroundColor="yellow";
+	          	}
+	          	i++;
+	        
+	       
+	       }
+	            }
+	</script>
+
+</html>

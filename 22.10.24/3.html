@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="Odiv">
+		
+		 <p id="p1">我是第一行内容</p>
+		
+		  <p id="p2">我是第二行内容</p>
+		
+		 <p id="p3">我是第三行内容</p>
+		
+		 <p id="p4">我是第四行内容</p>
+		
+		  </div>
+		  <button onclick="repaceP()">ClickMe!!!</button>
+	</body>
+	<script>
+		function repaceP(){
+			var box = document.getElementById("Odiv");
+			var p2 = document.getElementById("p2");
+			
+			var p3 = document.createElement('p');
+			p3.innerHTML = "我才不是第二行";
+			box.replaceChild(p3,p2);
+			p2.parentNode.replaceChild(p3,p2);
+	}
+	</script>
+</html>
